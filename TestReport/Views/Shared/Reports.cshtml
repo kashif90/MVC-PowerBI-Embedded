@@ -1,0 +1,13 @@
+﻿@model TestReport.Models.ReportsViewModel
+
+<a><i class="fa fa-bar-chart-o"></i> Reports <span class="fa fa-chevron-down"></span></a>
+<ul class="nav child_menu">
+    @foreach (var report in Model.Reports)
+    {
+        <!--if report id exist, then active-->
+        var reportClass = Request.QueryString["reportId"] == report.Id ? "active" : "";
+        <li class="@reportClass">
+            @Html.ActionLink(report.Name, "Report", new { reportId = report.Id })
+        </li>
+    }
+</ul>
