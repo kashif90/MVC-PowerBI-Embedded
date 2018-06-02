@@ -51,13 +51,15 @@
             <!-- top navigation -->
             @Html.Partial("Layout/_NavBarTop");
 
+            @RenderSection("Breadcrumbs", false)
+
             @RenderBody() <!-- I.e. Display Index View -->
-        
+
         </div>
 
-            <!-- footer content -->
-            @Html.Partial("Layout/_FooterContent");
-    
+        <!-- footer content -->
+        @Html.Partial("Layout/_FooterContent");
+
     </div>
 
     <!-- jQuery -->
@@ -72,6 +74,7 @@
     <script src="../Assets/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
     <!-- Custom Theme Scripts -->
     <script src="../Assets/js/custom.min.js"></script>
+    @RenderSection("PageScripts", false)
 </body>
 
 

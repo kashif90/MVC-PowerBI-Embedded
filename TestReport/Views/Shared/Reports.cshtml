@@ -7,7 +7,9 @@
         <!--if report id exist, then active-->
         var reportClass = Request.QueryString["reportId"] == report.Id ? "active" : "";
         <li class="@reportClass">
-            @Html.ActionLink(report.Name, "Report", new { reportId = report.Id })
+        <!--  -->
+        @Html.ActionLink(report.Name, "Report", new { reportId = report.Id })
+        <!--Html.ActionLink("link text", "someaction", "somecontroller", new { id = "123" }, null)-->
         </li>
     }
 </ul>

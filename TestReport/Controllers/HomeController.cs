@@ -50,6 +50,7 @@ namespace TestReport.Controllers
                 {
                     Reports = reportsResponse.Value.ToList()
                 };
+
                 return PartialView(viewModel);
             }
         }
