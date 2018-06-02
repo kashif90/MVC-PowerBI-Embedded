@@ -27,6 +27,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -331,6 +332,11 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Process\Landing.cshtml" />
     <Content Include="Views\Shared\Reports.cshtml" />
+    <Content Include="Views\Shared\Layout\_NavBarSide.cshtml" />
+    <Content Include="Views\Shared\Layout\_MenuFooterButtons.cshtml" />
+    <Content Include="Views\Shared\Layout\_MenuProfile.cshtml" />
+    <Content Include="Views\Shared\Layout\_NavBarTop.cshtml" />
+    <Content Include="Views\Shared\Layout\_FooterContent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
