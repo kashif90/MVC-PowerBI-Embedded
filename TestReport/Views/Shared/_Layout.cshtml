@@ -25,7 +25,7 @@
     <div class="container body">
         <div class="main_container">
 
-            <!-- Menu Container -->
+            <!-- Menu Container - Fixed-->
             <div class="col-md-3 left_col menu_fixed">
 
                 <!-- Menu - Sigma Seven Logo -->
@@ -34,8 +34,6 @@
                         <a href="Index.html" class="site_title"><i class="fa fa-paw"></i> <span>Sigma Seven</span></a> <!--Navigate to Index page-->
                     </div>
                     <div class="clearfix"></div>
-
-                    @RenderSection("Breadcrumbs", false)
 
                     <!-- Menu - Profile Info -->
                     @Html.Partial("Layout/_MenuProfile");
@@ -49,39 +47,43 @@
                     @Html.Partial("Layout/_MenuFooterButtons");
                 </div>
             </div>
+            @RenderSection("Breadcrumbs", false)
 
             <!-- top navigation -->
             @Html.Partial("Layout/_NavBarTop");
 
+            <!--Page Content-->
+            <div class="right_col" role="main">
+                <div class="">
+                    <div class="container-fluid">
+                        @RenderBody() <!-- I.e. Display Index View -->
+                    </div>
 
-            <div class="container-fluid">
-                @RenderBody() <!-- I.e. Display Index View -->
+                </div>
+            </div>
+        </div>
+                <!-- footer content -->
+                @Html.Partial("Layout/_FooterContent");
+
             </div>
 
-        </div>
+            <!-- jQuery -->
+            <script src="../Assets/vendors/jquery/dist/jquery.min.js"></script>
+            <!-- Bootstrap -->
+            <script src="../Assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+            <!-- FastClick -->
+            <script src="../Assets/vendors/fastclick/lib/fastclick.js"></script>
+            <!-- NProgress -->
+            <script src="../Assets/vendors/nprogress/nprogress.js"></script>
+            <!-- jQuery custom content scroller -->
+            <script src="../Assets/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+            <!-- Custom Theme Scripts -->
+            <script src="../Assets/js/custom.min.js"></script>
 
-        <!-- footer content -->
-        @Html.Partial("Layout/_FooterContent");
-
-    </div>
-
-    <!-- jQuery -->
-    <script src="../Assets/vendors/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="../Assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- FastClick -->
-    <script src="../Assets/vendors/fastclick/lib/fastclick.js"></script>
-    <!-- NProgress -->
-    <script src="../Assets/vendors/nprogress/nprogress.js"></script>
-    <!-- jQuery custom content scroller -->
-    <script src="../Assets/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
-    <!-- Custom Theme Scripts -->
-    <script src="../Assets/js/custom.min.js"></script>
-
-    <!--PowerBI scripts-->
-    <script src="~/Scripts/powerbi.js"></script>
-    <script type="text/javascript" src="~/Scripts/es6-promise.auto.min.js"></script>
-    @RenderSection("PageScripts", false)
+            <!--PowerBI scripts-->
+            <script src="~/Scripts/powerbi.js"></script>
+            <script type="text/javascript" src="~/Scripts/es6-promise.auto.min.js"></script>
+            @RenderSection("PageScripts", false)
 
 </body>
 
