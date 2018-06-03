@@ -35,6 +35,8 @@
                     </div>
                     <div class="clearfix"></div>
 
+                    @RenderSection("Breadcrumbs", false)
+
                     <!-- Menu - Profile Info -->
                     @Html.Partial("Layout/_MenuProfile");
 
@@ -51,9 +53,10 @@
             <!-- top navigation -->
             @Html.Partial("Layout/_NavBarTop");
 
-            @RenderSection("Breadcrumbs", false)
 
-            @RenderBody() <!-- I.e. Display Index View -->
+            <div class="container-fluid">
+                @RenderBody() <!-- I.e. Display Index View -->
+            </div>
 
         </div>
 
@@ -74,7 +77,12 @@
     <script src="../Assets/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
     <!-- Custom Theme Scripts -->
     <script src="../Assets/js/custom.min.js"></script>
+
+    <!--PowerBI scripts-->
+    <script src="~/Scripts/powerbi.js"></script>
+    <script type="text/javascript" src="~/Scripts/es6-promise.auto.min.js"></script>
     @RenderSection("PageScripts", false)
+
 </body>
 
 

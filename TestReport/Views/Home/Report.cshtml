@@ -1,4 +1,6 @@
 ﻿@model TestReport.Models.ReportViewModel
+
+
 @section Breadcrumbs {
     <ol class="breadcrumb navbar-breadcrumb">
         <li>Reports</li>
@@ -57,8 +59,7 @@
     </div>
 </div>
 @section PageScripts {
-    <script>
-        $(function () {
+    <script>$(function () {
             // For complete list of embed configuration see the following wiki page
             // https://github.com/Microsoft/PowerBI-JavaScript/wiki/Embed-Configuration-Details
             var reportConfig = {
@@ -175,6 +176,5 @@
 
             $('#filter-add').on('click', function () { addFilter(); });
             $('#filter-clear').on('click', function () { clearFilters(); });
-        });
-    </script>
+        });</script>
 }
